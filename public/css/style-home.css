@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('/img/background-home.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    margin-bottom: 20px;
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #007bff;
+    font-size: 1.5rem;
+}
+
+blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+}
+
+.lead {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.py-4{
+    padding-top: 0rem !important;
+}
+
+#featured-books-2{
+    padding-bottom: 75px;
+}
+
+.card:hover .card-body,
+.card:hover img:not(.coin-icon) {
+    filter: none !important;
+}
