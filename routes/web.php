@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BookController;
 
 Route::get('/', function () {
     return view('home');
@@ -39,3 +40,16 @@ Route::get('/read', function () {
 Route::get('/leer/laurel_indias', function () {
     return view('read');
 })->name('read');
+
+// Route::get('/cart', function () {
+//     return view('books');
+// });
+
+// Route::get('/crear', function () {
+//     return view('create');
+// });
+
+Route::get('/books/search', [BookController::class, 'search'])->name('books.search');
+
+Route::get('/books/{id}', [BookController::class, 'show'])->name('books.show');
+

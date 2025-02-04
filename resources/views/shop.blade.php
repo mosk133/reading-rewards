@@ -49,13 +49,14 @@
               </div>
               <span class="price text-primary fw-bold mb-2 fs-5">21,75 € - 430 R-Coins</span>
               <div class="card-concern position-absolute start-0 end-0 d-flex gap-2">
-                <button type="button" href="#" class="btn btn-brown" data-bs-toggle="tooltip" data-bs-placement="top"
-                  data-bs-title="Tooltip on top">
-                  <svg class="cart">
-                    <use xlink:href="#cart"></use>
-                  </svg>
-                </button>
-                <a href="#" class="btn btn-brown">
+                <a href="/cart" class="btn btn-brown">
+                    <span>
+                      <svg class="cart">
+                        <use xlink:href="#cart"></use>
+                      </svg>
+                    </span>
+                </a>
+                <a href="/cart" class="btn btn-brown">
                   <span>
                     <svg class="wishlist">
                       <use xlink:href="#heart"></use>

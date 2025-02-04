@@ -19,7 +19,7 @@
 </head>
 <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="search" xmlns="http://www.w3.org/2000/symbolsvg" viewBox="0 0 24 24">
+        <symbol id="search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path fill="currentColor" fill-rule="evenodd"
             d="M11.5 2.75a8.75 8.75 0 1 0 0 17.5a8.75 8.75 0 0 0 0-17.5M1.25 11.5c0-5.66 4.59-10.25 10.25-10.25S21.75 5.84 21.75 11.5c0 2.56-.939 4.902-2.491 6.698l3.271 3.272a.75.75 0 1 1-1.06 1.06l-3.272-3.271A10.21 10.21 0 0 1 11.5 21.75c-5.66 0-10.25-4.59-10.25-10.25"
             clip-rule="evenodd" />
@@ -134,8 +134,15 @@
                 </ul>
             </div>
             <div class="navbar-icons">
-                <ul class="d-flex align-items-center list-unstyled m-0 p-0">
-                    <li class="mx-0"><a href="/search"><i class="fas fa-search"></i></a></li>
+                <ul>
+                    <li>
+                        <form action="{{ route('books.search') }}" method="GET" class="search-container">
+                            <input type="text" class="search-bar" id="searchBar" name="query" placeholder="Buscar...">
+                            <button type="submit" id="searchIcon" class="icon">
+                                <i class="fas fa-search"></i> <!-- Icono de Font Awesome -->
+                            </button>
+                        </form>
+                    </li>
                     @auth
                     <li class="mx-0"><a href="/profile"><i class="fas fa-user"></i></a></li>
                     <li class="mx-0"><a href="/heart"><i class="fas fa-heart"></i></a></li>
@@ -181,4 +188,15 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
+<script>
+    document.getElementById('searchIcon').addEventListener('click', function (e) {
+        let searchBar = document.getElementById('searchBar');
+
+        if (!searchBar.classList.contains('active')) {
+            e.preventDefault(); // Previene el envío si la barra no está activa
+            searchBar.classList.add('active');
+            searchBar.focus();
+        }
+    });
+</script>
 </html>
