@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
 </head>
 <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -116,6 +115,11 @@
           <path
             d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z" />
         </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" id="eye" viewBox="0 0 24 24">
+            <path fill="currentColor" fill-rule="evenodd"
+              d="M12 4.5c-4.8 0-8.667 3.333-10 7.5c1.333 4.167 5.2 7.5 10 7.5s8.667-3.333 10-7.5c-1.333-4.167-5.2-7.5-10-7.5m0 2c3.568 0 6.56 2.247 7.75 5.5c-1.19 3.253-4.182 5.5-7.75 5.5s-6.56-2.247-7.75-5.5c1.19-3.253 4.182-5.5 7.75-5.5m0 2a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7m-1 3.5a1 1 0 1 1 2 0a1 1 0 0 1-2 0"
+              clip-rule="evenodd"/>
+          </symbol>
       </svg>
     <nav class="navbar">
         <div class="navbar-container">
@@ -164,14 +168,13 @@
         </div>
     </nav>
 
-
     <main>
             @yield('content')
     </main>
 
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2024 Reading Rewards. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Reading Rewards. Todos los derechos reservados.</p>
             <ul class="footer-links">
                 <li><a href="#">Política de privacidad</a></li>
                 <li><a href="#">Términos de servicio</a></li>
@@ -183,8 +186,8 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>

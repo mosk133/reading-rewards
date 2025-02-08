@@ -46,6 +46,13 @@ class BookController extends Controller
         // Pasa la variable $books a la vista books. compact('books') crea un array asociativo con la clave 'books' y el valor de la variable $books, para acceder dentro a los datos en la vista.
         return view('books', compact('books'));
     }
+
+    public function show($id){
+
+        $bookinfo = $this->googleBooksService->getBookId($id);
+
+        return view('book-info', ['bookinfo' => $bookinfo]);
+    }
 }
 
 /* Cuando en tu controlador haces esto:

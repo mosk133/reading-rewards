@@ -31,4 +31,12 @@ class GoogleBooksService
         // Retornar los Datos en Formato JSON
         return $response->json();
     }
+
+    public function getBookId($id){
+        $url = "https://www.googleapis.com/books/v1/volumes/{$id}?key={$this->apiKey}";
+
+        $result = Http::get($url);
+
+        return $result->json();
+    }
 }
