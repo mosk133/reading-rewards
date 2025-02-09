@@ -3,14 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\CartController;
 
 Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/shop', function () {
-    return view('shop');
-});
+Route::get('/shop', [BookController::class, 'showShopBooks']);
 
 Route::get('/library', function () {
     return view('library');
@@ -41,15 +40,12 @@ Route::get('/leer/laurel_indias', function () {
     return view('read');
 })->name('read');
 
-// Route::get('/cart', function () {
-//     return view('books');
-// });
-
-// Route::get('/crear', function () {
-//     return view('create');
-// });
-
 Route::get('/books/search', [BookController::class, 'search'])->name('books.search');
 
 Route::get('/books/{id}', [BookController::class, 'show'])->name('books.show');
 
+Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
+
+Route::post('/cart/{id}', [CartController::class, 'addToCart'])->name('cart.add');
+
+Route::post('/cart', [CartController::class, 'updateCart'])->name('cart.update');

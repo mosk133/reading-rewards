@@ -39,4 +39,37 @@ class GoogleBooksService
 
         return $result->json();
     }
+
+    public function getBooksCart($id){
+        $books = [];
+
+        foreach ($id as $bookId){
+            $url = "https://www.googleapis.com/books/v1/volumes/{$bookId}?key={$this->apiKey}";
+
+            $result = Http::get($url);
+
+            if ($result->successful()) {
+                // Si la solicitud fue ok, añade el libro a la colección de libros
+                $books[] = $result->json();
+            }
+        }
+
+        return $books;
+    }
+
+    public function getRecentBooks(){
+        $url = "https://www.googleapis.com/books/v1/volumes?q=recent&langRestrict=es&key={$this->apiKey}";
+
+        $result = Http::get($url);
+
+        return $result->json();
+    }
+
+    public function getSuspenseBooks(){
+        $url = "https://www.googleapis.com/books/v1/volumes?q=subject:suspense&orderBy=newest&maxResults=15&key={$this->apiKey}";
+
+        $result = Http::get($url);
+
+        return $result->json();
+    }
 }

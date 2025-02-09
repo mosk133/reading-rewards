@@ -53,6 +53,14 @@ class BookController extends Controller
 
         return view('book-info', ['bookinfo' => $bookinfo]);
     }
+
+    public function showShopBooks(){
+        $recentBooks = $this->googleBooksService->getRecentBooks();
+
+        $suspenseBooks = $this->googleBooksService->getSuspenseBooks();
+
+        return view('shop', compact('recentBooks', 'suspenseBooks'));
+    }
 }
 
 /* Cuando en tu controlador haces esto:

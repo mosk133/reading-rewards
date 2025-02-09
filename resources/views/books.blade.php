@@ -5,6 +5,7 @@
     <div class="container">
         <div class="section-title d-md-flex justify-content-between align-items-center mb-4">
             <h3 class="d-flex align-items-center">Resultados</h3>
+            <div id="message-container"></div>
         </div>
 
         <div class="row">
@@ -55,13 +56,16 @@
                                         </span>
                                     </button>
                                     <div class="d-flex gap-2">
-                                        <a href="/cart" class="btn btn-brown">
-                                            <span>
-                                                <svg class="cart">
-                                                    <use xlink:href="#cart"></use>
-                                                </svg>
-                                            </span>
-                                        </a>
+                                        <form id="add-to-cart-form-{{ $book['id'] }}" action="{{ route('cart.add', ['id' => $book['id']]) }}" method="POST">
+                                            @csrf
+                                            <button type="button" class="btn btn-brown add-to-cart" data-book-id="{{ $book['id'] }}">
+                                                <span>
+                                                    <svg class="cart">
+                                                        <use xlink:href="#cart"></use>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </form>
                                         <a href="#" class="btn btn-brown">
                                             <span>
                                                 <svg class="wishlist">
@@ -93,5 +97,30 @@
                 @endif
             </div>
     </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.add-to-cart').click(function() {
+        var bookId = $(this).data('book-id'); // Obtener el ID del libro desde el atributo data-book-id
+        var form = $('#add-to-cart-form-' + bookId);
+
+        $.ajax({
+            url: form.attr('action'),  // usar la action del formulario (la URL de la ruta)
+            method: 'POST',
+            data: form.serialize(),    // serializar el formulario (incluye el CSRF token)
+            success: function(response) {
+                // Si todo OK, mostrar el mensaje:
+                if (response.success) {
+                    $('#message-container').html('<div class="alert alert-success">' + response.success + '</div>');
+                }
+            },
+            error: function(xhr) {
+                // mensaje de error
+                $('#message-container').html('<div class="alert alert-danger">Ocurrió un error. Por favor, intenta de nuevo.</div>');
+            }
+        });
+    });
+});
+</script>
 </section>
 @endsection

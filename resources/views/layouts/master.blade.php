@@ -152,7 +152,7 @@
                     <li class="mx-0"><a href="/heart"><i class="fas fa-heart"></i></a></li>
                     @endauth
                     <li class="mx-0">
-                        <a href="/cart"><i class="fas fa-shopping-cart"><span style="color:brown; font-size:17px">2</span></i>
+                        <a href="{{ route('cart.show') }}"><i class="fas fa-shopping-cart"><span style="color:brown; font-size:17px">2</span></i>
                         </a>
                     </li>
                     @guest
