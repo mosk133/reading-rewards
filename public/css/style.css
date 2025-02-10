@@ -1754,3 +1754,57 @@ button {
 #best-selling-items.padding-medium {
     padding-bottom: 2em;
 }
+
+.profile-card img:not(.profile-coin-icon) {
+    object-fit: cover !important;
+}
+
+.profile-card.bootstrap-card {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.profile-card.bootstrap-card:hover .card-body,
+.profile-card.bootstrap-card:hover img:not(.profile-coin-icon) {
+    filter: none !important;
+    transition: filter 0.3s ease;
+}
+
+.profile-mt-5 {
+    height: 75% !important;
+    margin-top: 5rem !important;
+}
+
+.profile-picture {
+    width: 120px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.profile-progress {
+    height: 20px;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.profile-heading {
+    font-weight: 500 !important;
+}
+
+.profile-list-group .profile-list-item a:hover {
+    text-decoration: none !important;
+    color: brown !important;
+    cursor: pointer !important;
+}
+
+.profile-list-item {
+    margin-bottom: 10px;
+    border: none;
+}
+
+.profile-card-body {
+    background-color: white !important;
+    border-radius: 15px;
+    padding: 30px;
+}
