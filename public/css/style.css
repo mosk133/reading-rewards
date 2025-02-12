@@ -3,7 +3,7 @@ body {
     margin: 0;
     background-color: #efefef;
 }
-/* Estilo general del navbar */
+
 .navbar {
     background-color: #f8f9fa;
     padding: 10px 20px;
@@ -1607,7 +1607,7 @@ button {
 }
 
 .p-4 {
-    padding: 1.5rem !important;
+    padding: 1rem !important;
     height: 520px;
 }
 
@@ -1620,12 +1620,12 @@ button {
 
 
 .book-carousel-container {
-    width: 36%;
+    width: 39%;
 }
 
 .book-description{
-    padding-right: 17em;
-    width: 60%;
+    padding-right: 10em;
+    width: 58%;
 }
 
 .book-description-container {
@@ -1751,16 +1751,16 @@ button {
     visibility: visible !important;
 }
 
-#best-selling-items.padding-medium {
+/* #best-selling-items.padding-medium {
     padding-bottom: 2em;
-}
+} */
 
 .profile-card img:not(.profile-coin-icon) {
     object-fit: cover !important;
 }
 
 .profile-card.bootstrap-card {
-    max-width: 520px;
+    max-width: 550px;
     margin: 0 auto;
 }
 
@@ -1807,4 +1807,257 @@ button {
     background-color: white !important;
     border-radius: 15px;
     padding: 30px;
+}
+
+.profile-container .profile-text img.profile-coin-icon {
+    width: 26px;
+    height: auto;
+}
+
+.profile-container .profile-text {
+    font-size: 20px;
+}
+
+.col-md-6.profile-container {
+    padding-bottom: 8rem;
+}
+
+.custom-profile-card img:not(.custom-profile-coin-icon) {
+    object-fit: cover !important;
+}
+
+.custom-profile-card.custom-bootstrap-card {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.custom-profile-card.custom-bootstrap-card:hover .card-body,
+.custom-profile-card.custom-bootstrap-card:hover img:not(.custom-profile-coin-icon) {
+    filter: none !important;
+    transition: filter 0.3s ease;
+}
+
+.custom-profile-mt-5 {
+    height: 75% !important;
+    margin-top: 5rem !important;
+}
+
+.custom-profile-picture {
+    width: 120px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.custom-profile-progress {
+    height: 20px;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.custom-profile-heading {
+    font-weight: 500 !important;
+}
+
+.custom-profile-list-group .custom-profile-list-item a:hover {
+    text-decoration: none !important;
+    color: brown !important;
+    cursor: pointer !important;
+}
+
+.custom-profile-list-item {
+    margin-bottom: 10px;
+    border: none;
+}
+
+.custom-profile-card-body {
+    background-color: white !important;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.custom-profile-container .custom-profile-text img.custom-profile-coin-icon {
+    width: 26px;
+    height: auto;
+}
+
+.custom-profile-container .custom-profile-text {
+    font-size: 20px;
+}
+
+.custom-wallet-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 4rem;
+}
+
+.custom-wallet-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 650px;
+}
+
+.custom-wallet-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.custom-wallet-balance {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.custom-wallet-balance h3 {
+    font-size: 24px;
+    color: #28a745;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-wallet-coin-icon {
+    width: 22px;
+    margin-left: 5px;
+}
+
+.custom-wallet-section {
+    margin-top: 15px;
+}
+
+.custom-wallet-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.custom-wallet-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: brown;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.custom-wallet-button:hover {
+    background: black;
+}
+
+.custom-wallet-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.custom-wallet-list li {
+    background: #f8f9fa;
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.custom-wallet-pending {
+    background: #ffe9b3;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #ffcc00;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-wallet-pending h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.custom-wallet-list li {
+    background: #f8f9fa;
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 5px;
+    color: #d9534f;
+}
+
+.custom-wallet-list li:hover {
+    background: #f1c40f;
+}
+
+/*contenedor principal de login-register centrado */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 35px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 25%;
+    margin: 80px auto;
+}
+
+.login-image {
+    width: 150px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.login-title {
+    margin: 0 0 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.login-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-terms {
+    font-size: 14px;
+    text-align: left;
+    margin: 10px 0;
+}
+
+.login-terms input {
+    margin-right: 5px;
+}
+
+.login-button {
+    background-color: brown;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.login-button:hover {
+    background-color: black;
 }

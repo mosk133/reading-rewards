@@ -58,3 +58,13 @@ blockquote {
 .card:hover img:not(.coin-icon) {
     filter: none !important;
 }
+
+.container h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.container p.lead {
+    font-size: 1.5rem;
+    line-height: 1.8;
+}

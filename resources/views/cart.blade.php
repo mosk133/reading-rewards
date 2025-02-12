@@ -13,10 +13,6 @@
             <th>Cantidad</th>
             <th>Precio</th>
             @if(isset($books) && count($books) > 0)
-            @php
-                $totalEuros = 0;
-                $totalRCoins = 0;
-            @endphp
                     @foreach($books as $index => $book) <!-- Aqui obtenemos el índice del libro con $index -->
                 <tr>
                     <th><img src="{{ $book['volumeInfo']['imageLinks']['thumbnail'] ?? asset('images/default-book.jpg') }}"
@@ -45,14 +41,6 @@
                         {!! nl2br(isset($book['saleInfo']['listPrice']['amount']) ? $book['saleInfo']['listPrice']['amount'] * 4 . '  R-Coins' : '') !!}
                     </th>
                 </tr>
-                @php
-                //sumar el precio en euros y R-Coins total
-                $priceInEuros = isset($book['saleInfo']['listPrice']['amount']) ? $book['saleInfo']['listPrice']['amount'] : 0;
-                $priceInRCoins = $priceInEuros * 4;
-
-                $totalEuros += $priceInEuros;
-                $totalRCoins += $priceInRCoins;
-            @endphp
         @endforeach
     @endif
             <tr>

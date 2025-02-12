@@ -49,3 +49,7 @@ Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
 Route::post('/cart/{id}', [CartController::class, 'addToCart'])->name('cart.add');
 
 Route::post('/cart', [CartController::class, 'updateCart'])->name('cart.update');
+
+Route::get('/wallet', function () {
+    return view('wallet');
+});

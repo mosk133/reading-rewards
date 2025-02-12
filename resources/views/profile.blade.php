@@ -1,8 +1,7 @@
 @extends('layouts.master')
-<head>
+{{-- <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style-profile.css">
-</head>
+</head> --}}
 
 @section('content')
     <!-- Sección del Perfil -->
@@ -13,8 +12,8 @@
                 <div class="profile-card bootstrap-card shadow-sm">
                     <div class="card-body">
                         <ul class="list-group profile-list-group">
-                            <li class="list-group-item profile-list-item"><a href="#" class="profile-link">Mis Libros</a></li>
-                            <li class="list-group-item profile-list-item"><a href="#" class="profile-link">Cartera R-Coins</a></li>
+                            <li class="list-group-item profile-list-item"><a href="/library" class="profile-link">Mis Libros</a></li>
+                            <li class="list-group-item profile-list-item"><a href="/wallet" class="profile-link">Cartera R-Coins</a></li>
                             <li class="list-group-item profile-list-item"><a href="#" class="profile-link">Recompensas</a></li>
                             <li class="list-group-item profile-list-item"><a href="#" class="profile-link">Desafíos de Lectura</a></li>
                             <li class="list-group-item profile-list-item"><a href="#" class="profile-link">Notificaciones</a></li>

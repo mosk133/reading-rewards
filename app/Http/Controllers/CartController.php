@@ -23,9 +23,22 @@ class CartController extends Controller
         $quantity = CartItem::where('user_id', Auth::id())->pluck('quantity');
         // where('user_id', Auth::id()): Filtra los registros donde el user_id sea el ID del usuario autenticado.
         // 'user_id = Auth::id())'
-        $idBooks = $this->googleBooksService->getBooksCart($id);
-        // dd($quantity);
-        return view ('cart', ['books' => $idBooks, 'quantity' => $quantity]);
+        $books = $this->googleBooksService->getBooksCart($id);
+
+        $totalEuros = 0;
+        $totalRCoins = 0;
+
+        foreach ($books as $book) {
+        $priceInEuros = $book['saleInfo']['listPrice']['amount'] ?? 0;
+        $priceInRCoins = $priceInEuros * 4;
+
+        $quantityValue = is_numeric($quantity) ? $quantity : ($quantity->first() ?? 1);
+        $totalEuros += $priceInEuros * $quantityValue;
+        $totalRCoins += $priceInRCoins * $quantityValue;
+        }
+
+        // dd($books);
+        return view ('cart', compact('books', 'quantity', 'totalEuros', 'totalRCoins'));
     }
 
     public function addToCart($bookId){
